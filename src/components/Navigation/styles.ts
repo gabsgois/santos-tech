@@ -117,7 +117,7 @@ export const ButtonNav = styled.button<ButtonNavProps>`
   background-color: transparent;
   color: ${theme.colors.white};
   position: relative;
-  ${theme.typography.big}
+  ${theme.typography.bodyNav}
 
   &::before, &::after {
     background-color: ${theme.colors.white};
@@ -161,27 +161,12 @@ export const ButtonNav = styled.button<ButtonNavProps>`
     isContact &&
     css`
       align-items: center;
-      color: ${theme.colors.golden};
+      border: 1px solid ${theme.colors.white};
+      border-radius: 50px;
+      color: ${theme.colors.white};
+      padding: 12px 30px;
       display: flex;
       gap: 8px;
-      transition: 0.2s ease-in-out;
-
-      &::before,
-      &::after {
-        background-color: ${theme.colors.golden};
-        opacity: 1;
-        width: 100%;
-      }
-
-      &:hover {
-        &::before {
-          top: -8px;
-        }
-
-        &::after {
-          bottom: -8px;
-        }
-      }
 
       @media (max-width: ${theme.breakpoints.desktop.px}) {
         background-color: ${theme.colors.golden};
