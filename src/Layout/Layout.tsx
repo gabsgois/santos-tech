@@ -17,8 +17,8 @@ const fonts = [
     url: '/fonts/Nexa/font-family-nexa.css',
   },
   {
-    key: 'SFProDisplay',
-    url: '/fonts/SFProDisplay/font-family-sf-pro-display.css',
+    key: 'Work Sans',
+    url: '/fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap',
   },
 ];
 
@@ -37,18 +37,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <html lang="pt-br">
       <Head>
-        <title>
-          Praça Omaguás Pinheiros | Apartamentos à venda em
-          Pinheiros
-        </title>
+        <title>Santos Tech </title>
 
         {/* ======================================= */}
         {/*                  METAS                  */}
         {/* ======================================= */}
-        <meta
-          name="description"
-          content="Empreendimento de alto padrão com plantas de 125 m² a 165 m², 2 e 3 vagas e lazer superior."
-        />
+        <meta name="description" content="" />
         <meta
           content="width=device-width, initial-scale=1"
           name="viewport"

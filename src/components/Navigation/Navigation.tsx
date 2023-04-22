@@ -4,7 +4,7 @@ import {
   iconGolden,
   logo,
   logoAside,
-} from '../../assets/header';
+} from '../../assets/navigation';
 import { goNextSection, useWindowSize } from '../../providers';
 import { Container } from '../Grid';
 import Text from '../Text';
@@ -29,38 +29,34 @@ const Navigation: React.FC = () => {
 
   const Brand = (
     <BoxBrand data-aos="fade-down" data-aos-duration="1500">
-      <img src={logo} alt="Praça Omaguás Pinheiros" />
+      <img src={logo} alt="Santos Tech" />
     </BoxBrand>
   );
 
   const dataMenu = [
     {
-      key: 'recreation',
-      label: 'Lazer',
+      key: 'solutions',
+      label: 'Soluções',
     },
     {
-      key: 'project',
-      label: 'Projeto',
+      key: 'about',
+      label: 'A Santos Tech',
     },
     {
-      key: 'video',
-      label: 'Vídeo',
+      key: 'projects',
+      label: 'Projetos',
     },
     {
-      key: 'virtual-tour',
-      label: 'Tour Virtual',
+      key: 'depositions',
+      label: 'Depoimentos',
     },
     {
-      key: 'plans',
-      label: 'Plantas',
-    },
-    {
-      key: 'localization',
-      label: 'Localização',
+      key: 'partners',
+      label: 'Parceiros',
     },
     {
       key: 'contact',
-      label: 'Contato',
+      label: 'Fale conosco',
     },
   ];
 
@@ -70,7 +66,7 @@ const Navigation: React.FC = () => {
   };
 
   const Navigation = (
-    <Nav data-aos="fade-down" data-aos-duration="1500">
+    <Nav>
       {dataMenu.map(menu => (
         <ButtonNav
           key={menu.key}
