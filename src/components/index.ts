@@ -1,4 +1,5 @@
 export { default as Box } from './Box';
+export { default as Button } from './Button';
 export { default as Footer } from './Footer';
 export * from './Grid';
 export { default as Lightbox } from './Lightbox';
@@ -6,7 +7,7 @@ export { default as Modal } from './Modal';
 export { default as Navigation } from './Navigation';
 export { default as Select } from './Select';
 export { default as Text } from './Text';
-export { default as Textarea } from './Textarea';
 export { default as TextField } from './TextField';
 export type { ValidationProps } from './TextField';
+export { default as Textarea } from './Textarea';
 export { default as Video } from './Video';

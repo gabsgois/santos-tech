@@ -10,11 +10,6 @@ interface ButtonNavProps {
 }
 
 export const BoxContainer = styled.div`
-  background: linear-gradient(
-    180deg,
-    #31363e 0%,
-    rgba(49, 54, 62, 0) 100%
-  );
   padding: 30px 0 16px;
   position: relative;
   width: 100%;

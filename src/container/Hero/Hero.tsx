@@ -1,14 +1,19 @@
 import React from 'react';
+import { scroll } from '../../assets/hero';
+import { Button, Text } from '../../components';
 import { Container, ContainerHero, TitleHero } from './styles';
 
 const Hero: React.FC = () => {
   return (
     <ContainerHero>
       <Container>
-        <TitleHero
-        >
-          Atual, Autoral e Autêntico.
+        <Text>SANTOS TECH</Text>
+        <TitleHero>
+          A segurança e conforto do seu patrimônio agora tem nome
         </TitleHero>
+
+        <Button size={'medium'}>Conheça nossas soluções</Button>
+        <img src={scroll} alt="" />
       </Container>
     </ContainerHero>
   );

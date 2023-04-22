@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { primeiradobra } from '../../assets/hero';
+import { bgHero } from '../../assets/hero';
 import { Container as ContainerGrid } from '../../components';
 import theme from '../../theme';
 
 export const ContainerHero = styled.div`
-  background-image: url(${primeiradobra});
+  background-image: url(${bgHero});
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -13,22 +13,35 @@ export const ContainerHero = styled.div`
   position: relative;
   width: 100%;
 
-  &::after {
-    background: linear-gradient(
-      180deg,
-      #31363e 0%,
-      rgba(49, 54, 62, 0) 100%
-    );
-    bottom: 0;
-    content: '';
-    height: 420px;
-    position: absolute;
-    transform: matrix(1, 0, 0, -1, 0, 0);
-    width: 100%;
-  }
-
   @media (max-width: ${theme.breakpoints.desktop.px}) {
     margin-top: -138px;
+  }
+`;
+
+export const Container = styled(ContainerGrid)`
+  margin-top: 300px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  & > p {
+    padding-bottom: 10px;
+    color: ${theme.colors.white};
+  }
+
+  & > button {
+    border-radius: 50px;
+    border: 1px solid ${theme.colors.white};
+    background-color: transparent;
+    color: ${theme.colors.white};
+    position: absolute;
+    margin-top: 40px;
+    left: 0;
+  }
+
+  & > img {
+    margin-top: 200px;
   }
 `;
 
@@ -40,13 +53,5 @@ export const TitleHero = styled.h2`
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 28px;
-  text-transform: uppercase;
-`;
-
-export const Container = styled(ContainerGrid)`
-  bottom: 163px;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  z-index: 1;
+  max-width: 640px;
 `;
