@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { bgHero } from '../../assets/hero';
+import { bgHero, bgHeroMob } from '../../assets/hero';
 import { Container as ContainerGrid } from '../../components';
 import theme from '../../theme';
 
@@ -14,6 +14,10 @@ export const ContainerHero = styled.div`
   width: 100%;
 
   @media (max-width: ${theme.breakpoints.desktop.px}) {
+    background-image: url(${bgHeroMob});
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
     margin-top: -138px;
   }
 `;
