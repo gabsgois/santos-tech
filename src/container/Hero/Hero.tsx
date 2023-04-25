@@ -12,7 +12,9 @@ const Hero: React.FC = () => {
           A segurança e conforto do seu patrimônio agora tem nome
         </TitleHero>
 
-        <Button size={'medium'}>Conheça nossas soluções</Button>
+        <Button color="transparent" size={'medium'}>
+          Conheça nossas soluções
+        </Button>
         <img src={scroll} alt="" />
       </Container>
     </ContainerHero>
