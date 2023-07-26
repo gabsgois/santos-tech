@@ -79,7 +79,7 @@ export const ButtonMobile = styled.button<ActionProps>`
         height: 20px;
 
         span {
-          background-color: ${theme.colors.green.dark[1]};
+          background-color: ${theme.colors.green.dark};
 
           &:nth-child(1) {
             top: 50%;
@@ -143,7 +143,7 @@ export const ButtonNav = styled.button<ButtonNavProps>`
   }
 
   @media (max-width: ${theme.breakpoints.desktop.px}) {
-    color: ${theme.colors.green.dark[1]};
+    color: ${theme.colors.green.dark};
     text-align: right;
 
     &::before,
@@ -164,7 +164,7 @@ export const ButtonNav = styled.button<ButtonNavProps>`
       gap: 8px;
 
       @media (max-width: ${theme.breakpoints.desktop.px}) {
-        background-color: ${theme.colors.golden};
+        background-color: ${theme.colors.white};
         font-weight: 600;
         padding: 14px 30px;
         text-transform: uppercase;

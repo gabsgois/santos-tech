@@ -1,44 +1,24 @@
 import styled from 'styled-components';
+import { Container as ContainerGrid } from '../../components/Grid';
 import theme from '../../theme';
-import { Container } from '../Grid';
 
 export const Section = styled.div`
+  background-color: ${theme.colors.green.main};
   overflow: hidden;
   padding-top: 64px;
-`;
-
-export const Content = styled(Container)`
-  & > header {
-    display: grid;
-    margin-bottom: 40px;
-    position: relative;
-
-    &::before {
-      background-color: ${theme.colors.gray};
-      bottom: 1px;
-      content: '';
-      height: 1px;
-      left: 216px;
-      position: absolute;
-      width: 100vw;
-    }
-  }
-
-  & > p {
-    font-family: 'Nexa';
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-    padding-bottom: 64px;
-  }
 `;
 
 export const BoxDescription = styled.div`
   border-top: 1px solid ${theme.colors.gray};
   padding-block: 40px;
 
-  img {
-    margin-top: 40px;
+  & > h6 {
+    max-width: 290px;
+  }
+
+  a {
+    color: ${theme.colors.white};
+    text-decoration: underline;
   }
 
   @media (max-width: ${theme.breakpoints.desktop.px}) {
@@ -57,4 +37,26 @@ export const BoxImages = styled.div`
   img {
     object-fit: cover;
   }
+`;
+
+export const BoxSocial = styled.div`
+  position: relative;
+`;
+
+export const BoxIcons = styled.div`
+  bottom: 50%;
+  left: 40px;
+  position: absolute;
+  transform: translateY(50%);
+
+  & > img {
+    margin-right: 8px;
+    margin-top: 16px;
+  }
+`;
+
+export const Container = styled(ContainerGrid)`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 `;

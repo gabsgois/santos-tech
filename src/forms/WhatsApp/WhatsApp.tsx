@@ -65,7 +65,7 @@ const WhatsApp: React.FC = () => {
         width="100%"
         height="50vh"
       >
-        <PulseLoader color={theme.colors.golden} />
+        <PulseLoader color={theme.colors.green.dark} />
       </Box>
     );
   }
@@ -124,7 +124,7 @@ const WhatsApp: React.FC = () => {
   return (
     <>
       {!isDesktop && (
-        <Text mb={24} color={theme.colors.golden}>
+        <Text mb={24} color={theme.colors.green.dark}>
           Fale com a nossa equipe por WhatsApp.
         </Text>
       )}
