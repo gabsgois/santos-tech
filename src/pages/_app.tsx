@@ -14,7 +14,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       width="100%"
       height="100vh"
     >
-      <PulseLoader color={theme.colors.golden} />
+      <PulseLoader color={theme.colors.green.dark} />
     </Box>
   );
 

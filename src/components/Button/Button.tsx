@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import theme from '../../theme';
-import Brand from '../Brand';
 import { Btn, BtnProps } from './styles';
 
 interface ButtonProps extends BtnProps {
@@ -35,13 +33,6 @@ const Button: React.FC<ButtonProps> = ({
       color={color}
     >
       {children}{' '}
-      {icon && (
-        <Brand
-          color={
-            onHover ? theme.colors.gray : theme.colors.green.dark
-          }
-        />
-      )}
     </Btn>
   );
 };

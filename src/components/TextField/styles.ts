@@ -64,6 +64,6 @@ export const Error = styled.p<CustomStylesProps>`
     css`
       color: ${theme.colors.feedback.error};
       margin-top: 4px;
-      ${theme.typography.legend}
+      ${theme.typography.body}
     `}
 `;

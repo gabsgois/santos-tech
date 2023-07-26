@@ -119,7 +119,7 @@ const Contact: React.FC = () => {
         width="100%"
         height="50vh"
       >
-        <PulseLoader color={theme.colors.golden} />
+        <PulseLoader color={theme.colors.green.dark} />
       </Box>
     );
   }

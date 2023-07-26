@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  iconBlack,
-  iconGolden,
-  logo,
-  logoAside,
-} from '../../assets/navigation';
+import { logo } from '../../assets/navigation';
 import { goNextSection, useWindowSize } from '../../providers';
 import { Container } from '../Grid';
 import Text from '../Text';
@@ -75,12 +70,7 @@ const Navigation: React.FC = () => {
         >
           {menu.label}
 
-          {menu.key === 'contact' && (
-            <img
-              src={isDesktop ? iconGolden : iconBlack}
-              alt=""
-            />
-          )}
+          {menu.key === 'contact'}
         </ButtonNav>
       ))}
     </Nav>
@@ -91,7 +81,7 @@ const Navigation: React.FC = () => {
       isOpen={openMenu}
       onClick={() => setOpenMenu(!openMenu)}
     >
-      <Text variant="legend">menu</Text>
+      <Text variant="body">menu</Text>
 
       <div>
         <span />
@@ -109,7 +99,7 @@ const Navigation: React.FC = () => {
 
         <Aside isOpen={openMenu}>
           <header>
-            <img src={logoAside} alt="Praça Omaguás Pinheiros" />
+            <img src={logo} alt="logo Santos Tech" />
 
             {ToggleMenu}
           </header>
