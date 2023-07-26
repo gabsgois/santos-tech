@@ -5,7 +5,7 @@ import theme from '../../theme';
 
 export interface BtnProps extends SpaceProps {
   size: 'full' | 'small' | 'medium' | 'large';
-  color?: 'greenDark' | 'golden' | 'transparent';
+  color?: 'greenDark' | 'yellow' | 'transparent';
 }
 
 const sizes = {
@@ -16,37 +16,52 @@ const sizes = {
 };
 
 const variant = {
-  golden: css`
-    background-color: ${theme.colors.golden};
-    color: ${theme.colors.green.dark[1]};
+  greenDark: css`
+    background-color: ${theme.colors.green.dark};
+    border-radius: 50px;
+    border: 1px solid ${theme.colors.green.dark};
+    color: ${theme.colors.white};
 
     &:hover {
-      background-color: ${theme.colors.green.dark[1]};
-      color: ${theme.colors.golden};
+      background-color: ${theme.colors.white};
+      color: ${theme.colors.green.dark};
     }
   `,
-  greenDark: css`
-    border: 1px solid ${theme.colors.green.dark[1]};
-    background-color: ${theme.colors.green.dark[1]};
-    color: ${theme.colors.white};
+
+  yellow: css`
+    background-color: ${theme.colors.yellow};
+    border-radius: 50px;
+    border: 1px solid ${theme.colors.yellow};
+    color: ${theme.colors.green.dark};
+
+    &:hover {
+      background-color: ${theme.colors.green.dark};
+      color: ${theme.colors.yellow};
+    }
   `,
   transparent: css`
-    border: 1px solid ${theme.colors.green.dark[1]};
     background-color: transparent;
-    color: ${theme.colors.green.dark[1]};
+    border-radius: 50px;
+    border: 1px solid ${theme.colors.white};
+    color: ${theme.colors.white};
+
+    &:hover {
+      background-color: ${theme.colors.white};
+      color: ${theme.colors.green.dark};
+    }
   `,
 };
 
 export const Btn = styled.button<BtnProps>`
   align-items: center;
   display: flex;
-  justify-content: center;
   gap: 12px;
+  justify-content: center;
   margin-inline: auto;
+  max-width: ${({ size }) => sizes[size]};
   padding: 14px;
   text-transform: uppercase;
   transition: 0.2s ease-in-out;
-  max-width: ${({ size }) => sizes[size]};
   width: 100%;
   ${space}
 
@@ -57,8 +72,8 @@ export const Btn = styled.button<BtnProps>`
     width: 20px;
   }
 
-  ${switchProp(prop('color', 'golden'), {
-    golden: variant.golden,
+  ${switchProp(prop('color', 'yellow'), {
+    yellow: variant.yellow,
     greenDark: variant.greenDark,
     transparent: variant.transparent,
   })}

@@ -35,10 +35,6 @@ export const Container = styled(ContainerGrid)`
   }
 
   & > button {
-    border-radius: 50px;
-    border: 1px solid ${theme.colors.white};
-    background-color: transparent;
-    color: ${theme.colors.white};
     position: absolute;
     margin-top: 40px;
     left: 0;
