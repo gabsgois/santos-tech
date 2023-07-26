@@ -18,7 +18,11 @@ const fonts = [
   },
   {
     key: 'Work Sans',
-    url: '/fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap',
+    url: 'https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Urbanist:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap',
+  },
+  {
+    key: 'Urbanist',
+    url: 'https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Urbanist:wght@300;400;500;600;700&display=swap',
   },
 ];
 

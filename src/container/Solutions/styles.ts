@@ -22,8 +22,8 @@ export const BoxCards = styled.div`
 
 export const Card = styled.div`
   & > img {
-    border: 10px solid ${theme.colors.white};
     border-radius: 15px;
+    border: 10px solid ${theme.colors.white};
   }
 
   & > h4 {

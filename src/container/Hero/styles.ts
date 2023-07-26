@@ -34,6 +34,11 @@ export const Container = styled(ContainerGrid)`
     color: ${theme.colors.white};
   }
 
+  & > h1 {
+    max-width: 650px;
+    padding-bottom: 10px;
+  }
+
   & > button {
     position: absolute;
     margin-top: 40px;
@@ -43,15 +48,4 @@ export const Container = styled(ContainerGrid)`
   & > img {
     margin-top: 200px;
   }
-`;
-
-export const TitleHero = styled.h2`
-  color: ${theme.colors.white};
-  display: flex;
-  font-family: 'Essonnes';
-  font-size: 28px;
-  font-weight: 400;
-  letter-spacing: 3px;
-  line-height: 28px;
-  max-width: 640px;
 `;

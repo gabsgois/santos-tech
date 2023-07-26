@@ -11,6 +11,7 @@ import {
 } from '../../assets/solutions';
 import { Container, Text } from '../../components';
 import { Btn } from '../../components/Button/styles';
+import theme from '../../theme/theme';
 import { BoxCards, Card, Section } from './styles';
 
 const data = [
@@ -53,7 +54,11 @@ const Solutions: React.FC = () => {
     <Section>
       <Container>
         <Text variant="spanSmall">Soluções</Text>
-        <Text variant="h2Desktop">
+        <Text
+          variant="h2Desktop"
+          color={theme.colors.green.dark}
+          mb={48}
+        >
           Protegemos e facilitamos o que importa
         </Text>
 

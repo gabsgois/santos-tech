@@ -1,16 +1,21 @@
 import React from 'react';
 import { scroll } from '../../assets/hero';
 import { Button, Text } from '../../components';
-import { Container, ContainerHero, TitleHero } from './styles';
+import theme from '../../theme/theme';
+import { Container, ContainerHero } from './styles';
 
 const Hero: React.FC = () => {
   return (
     <ContainerHero>
       <Container>
         <Text>SANTOS TECH</Text>
-        <TitleHero>
+        <Text
+          as="h1"
+          variant="h1Desktop"
+          color={theme.colors.white}
+        >
           A segurança e conforto do seu patrimônio agora tem nome
-        </TitleHero>
+        </Text>
 
         <Button color="transparent" size={'medium'}>
           Conheça nossas soluções
