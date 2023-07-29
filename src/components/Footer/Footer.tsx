@@ -2,11 +2,13 @@ import Link from 'next/link';
 import React from 'react';
 import {
   bgFooterDesk,
+  bgFooterMob,
   facebook,
   instagram,
   logoFooter,
   youtube,
 } from '../../assets/footer';
+import { useWindowSize } from '../../providers';
 import theme from '../../theme/theme';
 import Text from '../Text';
 import {
@@ -18,6 +20,8 @@ import {
 } from './styles';
 
 const Footer: React.FC = () => {
+  const isDesktop = useWindowSize();
+
   return (
     <Section>
       <Container>
@@ -48,9 +52,13 @@ const Footer: React.FC = () => {
             <img src={youtube} alt="youtube" />
           </BoxIcons>
 
-          <img src={bgFooterDesk} alt="" />
+          {isDesktop && (
+            <img src={bgFooterDesk} alt="background" />
+          )}
         </BoxSocial>
       </Container>
+
+      {!isDesktop && <img src={bgFooterMob} alt="background" />}
     </Section>
   );
 };

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { logo } from '../../assets/navigation';
 import { goNextSection, useWindowSize } from '../../providers';
 import { Container } from '../Grid';
-import Text from '../Text';
 import {
   Aside,
   BoxBrand,
@@ -81,9 +80,10 @@ const Navigation: React.FC = () => {
       isOpen={openMenu}
       onClick={() => setOpenMenu(!openMenu)}
     >
-      <Text variant="body">menu</Text>
+      {/* <Text variant="body">menu</Text> */}
 
       <div>
+        <span />
         <span />
         <span />
       </div>

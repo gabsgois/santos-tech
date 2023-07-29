@@ -29,6 +29,7 @@ export const Label = styled.label<CustomStylesProps>`
     label ??
     css`
       color: 1px solid ${theme.colors.purple};
+      color: ${theme.colors.cream};
       display: block;
       ${theme.typography.body}
     `}
@@ -47,6 +48,7 @@ export const Input = styled(Field)<
         : isValid
         ? theme.colors.feedback.success
         : theme.colors.purple};
+      border-radius: 5px;
       display: block;
       height: 110px;
       padding: 8px 12px;

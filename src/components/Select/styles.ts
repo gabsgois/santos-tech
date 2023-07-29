@@ -25,6 +25,7 @@ export const Label = styled.label<CustomStylesProps>`
     label ??
     css`
       display: block;
+      color: ${theme.colors.cream};
       ${theme.typography.body}
     `}
 `;
@@ -37,6 +38,7 @@ export const Input = styled(Field)`
   background-position-x: calc(100% - 16px);
   background-position-y: 50%;
   background-repeat: no-repeat;
+  border-radius: 5px;
   display: block;
   height: 58px;
   padding: 16px;
