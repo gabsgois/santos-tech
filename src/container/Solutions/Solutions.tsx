@@ -1,4 +1,6 @@
 import React from 'react';
+import { Navigation, Pagination } from 'swiper';
+import { SwiperSlide } from 'swiper/react';
 import {
   image1,
   image2,
@@ -11,8 +13,9 @@ import {
 } from '../../assets/solutions';
 import { Container, Text } from '../../components';
 import { Btn } from '../../components/Button/styles';
+import { useWindowSize } from '../../providers';
 import theme from '../../theme/theme';
-import { BoxCards, Card, Section } from './styles';
+import { BoxCards, Card, Section, SwiperReact } from './styles';
 
 const data = [
   {
@@ -50,6 +53,8 @@ const data = [
 ];
 
 const Solutions: React.FC = () => {
+  const isDesktop = useWindowSize();
+
   return (
     <Section>
       <Container>
@@ -62,16 +67,39 @@ const Solutions: React.FC = () => {
           Protegemos e facilitamos o que importa
         </Text>
 
-        <BoxCards>
-          {data.map(item => (
-            <Card>
-              <img src={item.img} alt="" />
-              <Text as="h4" variant="h4Desktop">
-                {item.description}
-              </Text>
-            </Card>
-          ))}
-        </BoxCards>
+        {isDesktop ? (
+          <BoxCards>
+            {data.map(item => (
+              <Card>
+                <img src={item.img} alt="" />
+                <Text as="h4" variant="h4Desktop">
+                  {item.description}
+                </Text>
+              </Card>
+            ))}
+          </BoxCards>
+        ) : (
+          <SwiperReact
+            slidesPerView={1}
+            pagination
+            navigation
+            modules={[Navigation, Pagination]}
+            spaceBetween={30}
+          >
+            <SwiperSlide>
+              <BoxCards>
+                {data.map(item => (
+                  <Card>
+                    <img src={item.img} alt="" />
+                    <Text as="h4" variant="h4Desktop">
+                      {item.description}
+                    </Text>
+                  </Card>
+                ))}
+              </BoxCards>
+            </SwiperSlide>
+          </SwiperReact>
+        )}
 
         <Btn mt={48} size="medium" color="greenDark">
           Solicite um orçamento
