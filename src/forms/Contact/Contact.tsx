@@ -5,6 +5,7 @@ import ReactGA from 'react-ga';
 import { PulseLoader } from 'react-spinners';
 import {
   Box,
+  Button,
   Select,
   Text,
   TextField,
@@ -173,20 +174,36 @@ const Contact: React.FC = () => {
 
   const contactTypes = [
     {
-      value: 'Email',
-      label: 'E-mail',
+      value: 'Cameras',
+      label: 'Instalação de câmeras',
     },
     {
-      value: 'Whatsapp',
-      label: 'Whatsapp',
+      value: 'Interfones',
+      label: 'Interfones',
     },
     {
-      value: 'Chat',
-      label: 'Chat',
+      value: 'Automacao_portas_portoes',
+      label: 'Automação de portas e portões',
     },
     {
-      value: 'Telefone',
-      label: 'Telefone',
+      value: 'Acesso_facial',
+      label: 'Acesso por reconhecimento facial',
+    },
+    {
+      value: 'Alarmes_incendio',
+      label: 'Instalação de alarmes de incêndio',
+    },
+    {
+      value: 'Automaao_resdencial',
+      label: 'Automação residencial',
+    },
+    {
+      value: 'paineis_solares',
+      label: 'Instalação de painéis solares',
+    },
+    {
+      value: 'Carregadores_veiculares',
+      label: 'Carregadores veiculares',
     },
   ];
 
@@ -209,7 +226,7 @@ const Contact: React.FC = () => {
             <>
               <Select
                 name="forma_de_contato"
-                label="Por qual canal podemos conversar?"
+                label="Qual dos nosos serviços te interessou?"
                 options={contactTypes}
               />
 
@@ -238,9 +255,13 @@ const Contact: React.FC = () => {
                 status={() => getStatus('Mensagem')}
               />
 
-              <button disabled={isSubmitting}>
-                SOLICITAR CONTATO
-              </button>
+              <Button
+                size="full"
+                color="yellow"
+                disabled={isSubmitting}
+              >
+                Solicitar contato
+              </Button>
             </>
           </Form>
         );

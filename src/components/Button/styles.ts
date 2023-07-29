@@ -60,7 +60,6 @@ export const Btn = styled.button<BtnProps>`
   margin-inline: auto;
   max-width: ${({ size }) => sizes[size]};
   padding: 14px;
-  text-transform: uppercase;
   transition: 0.2s ease-in-out;
   width: 100%;
   ${space}

@@ -38,7 +38,7 @@ const Select: React.FC<SelectProps> = ({
 
       <Input name={name} id={name} component="select">
         <option value="" disabled selected>
-          Selecione uma opção de contato
+          Selecione o motivo do seu contato
         </option>
 
         {options.map(opt => (

@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import Layout from '../Layout';
 import { Hero } from '../container';
+import Contact from '../container/Contact/Contact';
 import Solutions from '../container/Solutions/Solutions';
 
 const AppPage: NextPage = () => {
@@ -17,6 +18,7 @@ const AppPage: NextPage = () => {
       <Solutions />
 
       {/* <Video src="/video.mp4" loop controls autoPlay /> */}
+      <Contact />
     </Layout>
   );
 };

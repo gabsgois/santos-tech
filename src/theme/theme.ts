@@ -27,6 +27,7 @@ export default {
     ebony: '#0A0A19',
     mineShaft: '#3D3D3D',
     select: '#E6E5E6',
+    cream: '#EDE4DB',
     yellow: '#F6B446',
     purple: '#38303B',
     divider: '#EBEAE3',

@@ -40,12 +40,14 @@ export const Container = styled(ContainerGrid)`
   }
 
   & > button {
-    position: absolute;
-    margin-top: 40px;
-    left: 0;
+    margin-top: 16px;
   }
 
   & > img {
     margin-top: 200px;
+  }
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
+    margin-top: 135px;
   }
 `;

@@ -6,6 +6,11 @@ export const Section = styled.div`
   background-color: ${theme.colors.green.main};
   overflow: hidden;
   padding-top: 64px;
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 `;
 
 export const BoxDescription = styled.div`
@@ -22,7 +27,6 @@ export const BoxDescription = styled.div`
   }
 
   @media (max-width: ${theme.breakpoints.desktop.px}) {
-    padding-bottom: 100px;
   }
 `;
 
@@ -59,4 +63,8 @@ export const Container = styled(ContainerGrid)`
   align-items: center;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
+    flex-direction: column-reverse;
+  }
 `;

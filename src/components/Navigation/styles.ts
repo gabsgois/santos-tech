@@ -65,6 +65,12 @@ export const ButtonMobile = styled.button<ActionProps>`
 
       &:nth-child(2) {
         bottom: 0;
+        width: 20px;
+        right: 0;
+      }
+
+      &:nth-child(3) {
+        bottom: -8px;
       }
     }
   }
@@ -91,6 +97,11 @@ export const ButtonMobile = styled.button<ActionProps>`
             top: 50%;
             transform: translate(-50%);
             transform: rotate(-45deg);
+            width: 28px;
+          }
+
+          &:nth-child(3) {
+            display: none;
           }
         }
       }

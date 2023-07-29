@@ -30,11 +30,13 @@ export const BoxInput = styled.div<
       css`
         background-color: ${theme.colors.white};
         border: 1px solid;
+
         border-color: ${isError
           ? theme.colors.feedback.error
           : isValid
           ? theme.colors.feedback.success
           : theme.colors.purple};
+        border-radius: 5px;
         display: block;
         height: 58px;
         padding: 8px 12px;
@@ -52,7 +54,8 @@ export const Label = styled.label<CustomStylesProps>`
   ${({ label }) =>
     label ??
     css`
-      color: 1px solid ${theme.colors.purple};
+      color: 1px solid ${theme.colors.cream};
+      color: ${theme.colors.cream};
       display: block;
       ${theme.typography.body}
     `}

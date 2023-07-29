@@ -9,7 +9,7 @@ const initialValues = {
   Email: '',
   Telefone: '',
   Mensagem:
-    'Olá, gostaria de receber mais informações sobre o Praça Omaguás.',
+    'Olá, gostaria de ter mais informações sobre a Santos Telecom.',
   forma_de_contato: 'Email',
 };
 
