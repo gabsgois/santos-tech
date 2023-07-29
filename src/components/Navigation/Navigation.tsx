@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import {
-  iconBlack,
-  iconGolden,
-  logo,
-  logoAside,
-} from '../../assets/header';
+import { logo } from '../../assets/navigation';
 import { goNextSection, useWindowSize } from '../../providers';
 import { Container } from '../Grid';
-import Text from '../Text';
 import {
   Aside,
   BoxBrand,
@@ -29,38 +23,34 @@ const Navigation: React.FC = () => {
 
   const Brand = (
     <BoxBrand data-aos="fade-down" data-aos-duration="1500">
-      <img src={logo} alt="Praça Omaguás Pinheiros" />
+      <img src={logo} alt="Santos Tech" />
     </BoxBrand>
   );
 
   const dataMenu = [
     {
-      key: 'recreation',
-      label: 'Lazer',
+      key: 'solutions',
+      label: 'Soluções',
     },
     {
-      key: 'project',
-      label: 'Projeto',
+      key: 'about',
+      label: 'A Santos Tech',
     },
     {
-      key: 'video',
-      label: 'Vídeo',
+      key: 'projects',
+      label: 'Projetos',
     },
     {
-      key: 'virtual-tour',
-      label: 'Tour Virtual',
+      key: 'depositions',
+      label: 'Depoimentos',
     },
     {
-      key: 'plans',
-      label: 'Plantas',
-    },
-    {
-      key: 'localization',
-      label: 'Localização',
+      key: 'partners',
+      label: 'Parceiros',
     },
     {
       key: 'contact',
-      label: 'Contato',
+      label: 'Fale conosco',
     },
   ];
 
@@ -70,7 +60,7 @@ const Navigation: React.FC = () => {
   };
 
   const Navigation = (
-    <Nav data-aos="fade-down" data-aos-duration="1500">
+    <Nav>
       {dataMenu.map(menu => (
         <ButtonNav
           key={menu.key}
@@ -79,12 +69,7 @@ const Navigation: React.FC = () => {
         >
           {menu.label}
 
-          {menu.key === 'contact' && (
-            <img
-              src={isDesktop ? iconGolden : iconBlack}
-              alt=""
-            />
-          )}
+          {menu.key === 'contact'}
         </ButtonNav>
       ))}
     </Nav>
@@ -95,9 +80,10 @@ const Navigation: React.FC = () => {
       isOpen={openMenu}
       onClick={() => setOpenMenu(!openMenu)}
     >
-      <Text variant="legend">menu</Text>
+      {/* <Text variant="body">menu</Text> */}
 
       <div>
+        <span />
         <span />
         <span />
       </div>
@@ -113,7 +99,7 @@ const Navigation: React.FC = () => {
 
         <Aside isOpen={openMenu}>
           <header>
-            <img src={logoAside} alt="Praça Omaguás Pinheiros" />
+            <img src={logo} alt="logo Santos Tech" />
 
             {ToggleMenu}
           </header>

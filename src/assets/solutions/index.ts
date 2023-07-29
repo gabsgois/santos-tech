@@ -1,0 +1,9 @@
+export { default as image1 } from './1.svg';
+export { default as image2 } from './2.svg';
+export { default as image3 } from './3.svg';
+export { default as image4 } from './4.svg';
+export { default as image5 } from './5.svg';
+export { default as image6 } from './6.svg';
+export { default as image7 } from './7.svg';
+export { default as image8 } from './8.svg';
+export { default as bgSolutions } from './bg-solutions.svg';

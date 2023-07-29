@@ -15,12 +15,15 @@ export type TextProps = ColorProps &
   TypographyProps & {
     variant?:
       | 'body'
-      | 'big'
+      | 'bodyNav'
+      | 'spanSmall'
       | 'button'
-      | 'legend'
-      | 'spanBigDesktop'
-      | 'spanBigMobile'
+      | 'h1Desktop'
       | 'h2Desktop'
+      | 'h3Desktop'
+      | 'h4Desktop'
+      | 'h5Desktop'
+      | 'h1Mobile'
       | 'h2Mobile';
     uppercase?: boolean;
   };
@@ -28,12 +31,15 @@ export type TextProps = ColorProps &
 const Text = styled.p<TextProps>`
   ${switchProp(prop('variant', 'body'), {
     body: theme.typography.body,
-    big: theme.typography.big,
+    bodyNav: theme.typography.bodyNav,
+    spanSmall: theme.typography.spanSmall,
     button: theme.typography.button,
-    legend: theme.typography.legend,
-    spanBigDesktop: theme.typography.spanBigDesktop,
-    spanBigMobile: theme.typography.spanBigMobile,
+    h1Desktop: theme.typography.h1Desktop,
     h2Desktop: theme.typography.h2Desktop,
+    h3Desktop: theme.typography.h3Desktop,
+    h4Desktop: theme.typography.h4Desktop,
+    h5Desktop: theme.typography.h5Desktop,
+    h1Mobile: theme.typography.h1Mobile,
     h2Mobile: theme.typography.h2Mobile,
   })}
 

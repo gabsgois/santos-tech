@@ -1,3 +1,3 @@
-export { default as lifestyle } from './lifestyle.png';
-export { default as omaguas } from './omaguas.png';
-export { default as primeiradobra } from './primeira-dobra.jpg';
+export { default as bgHero } from './bg-hero-desk.svg';
+export { default as bgHeroMob } from './bg-hero-mob.svg';
+export { default as scroll } from './call-to-scroll.svg';

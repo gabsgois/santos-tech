@@ -10,11 +10,6 @@ interface ButtonNavProps {
 }
 
 export const BoxContainer = styled.div`
-  background: linear-gradient(
-    180deg,
-    #31363e 0%,
-    rgba(49, 54, 62, 0) 100%
-  );
   padding: 30px 0 16px;
   position: relative;
   width: 100%;
@@ -70,6 +65,12 @@ export const ButtonMobile = styled.button<ActionProps>`
 
       &:nth-child(2) {
         bottom: 0;
+        width: 20px;
+        right: 0;
+      }
+
+      &:nth-child(3) {
+        bottom: -8px;
       }
     }
   }
@@ -84,7 +85,7 @@ export const ButtonMobile = styled.button<ActionProps>`
         height: 20px;
 
         span {
-          background-color: ${theme.colors.green.dark[1]};
+          background-color: ${theme.colors.green.dark};
 
           &:nth-child(1) {
             top: 50%;
@@ -96,6 +97,11 @@ export const ButtonMobile = styled.button<ActionProps>`
             top: 50%;
             transform: translate(-50%);
             transform: rotate(-45deg);
+            width: 28px;
+          }
+
+          &:nth-child(3) {
+            display: none;
           }
         }
       }
@@ -117,7 +123,7 @@ export const ButtonNav = styled.button<ButtonNavProps>`
   background-color: transparent;
   color: ${theme.colors.white};
   position: relative;
-  ${theme.typography.big}
+  ${theme.typography.bodyNav}
 
   &::before, &::after {
     background-color: ${theme.colors.white};
@@ -148,7 +154,7 @@ export const ButtonNav = styled.button<ButtonNavProps>`
   }
 
   @media (max-width: ${theme.breakpoints.desktop.px}) {
-    color: ${theme.colors.green.dark[1]};
+    color: ${theme.colors.green.dark};
     text-align: right;
 
     &::before,
@@ -161,30 +167,15 @@ export const ButtonNav = styled.button<ButtonNavProps>`
     isContact &&
     css`
       align-items: center;
-      color: ${theme.colors.golden};
+      border: 1px solid ${theme.colors.white};
+      border-radius: 50px;
+      color: ${theme.colors.white};
+      padding: 12px 30px;
       display: flex;
       gap: 8px;
-      transition: 0.2s ease-in-out;
-
-      &::before,
-      &::after {
-        background-color: ${theme.colors.golden};
-        opacity: 1;
-        width: 100%;
-      }
-
-      &:hover {
-        &::before {
-          top: -8px;
-        }
-
-        &::after {
-          bottom: -8px;
-        }
-      }
 
       @media (max-width: ${theme.breakpoints.desktop.px}) {
-        background-color: ${theme.colors.golden};
+        background-color: ${theme.colors.white};
         font-weight: 600;
         padding: 14px 30px;
         text-transform: uppercase;

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { primeiradobra } from '../../assets/hero';
+import { bgHero, bgHeroMob } from '../../assets/hero';
 import { Container as ContainerGrid } from '../../components';
 import theme from '../../theme';
 
 export const ContainerHero = styled.div`
-  background-image: url(${primeiradobra});
+  background-image: url(${bgHero});
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -13,40 +13,41 @@ export const ContainerHero = styled.div`
   position: relative;
   width: 100%;
 
-  &::after {
-    background: linear-gradient(
-      180deg,
-      #31363e 0%,
-      rgba(49, 54, 62, 0) 100%
-    );
-    bottom: 0;
-    content: '';
-    height: 420px;
-    position: absolute;
-    transform: matrix(1, 0, 0, -1, 0, 0);
-    width: 100%;
-  }
-
   @media (max-width: ${theme.breakpoints.desktop.px}) {
+    background-image: url(${bgHeroMob});
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
     margin-top: -138px;
   }
 `;
 
-export const TitleHero = styled.h2`
-  color: ${theme.colors.white};
-  display: flex;
-  font-family: 'Essonnes';
-  font-size: 28px;
-  font-weight: 400;
-  letter-spacing: 3px;
-  line-height: 28px;
-  text-transform: uppercase;
-`;
-
 export const Container = styled(ContainerGrid)`
-  bottom: 163px;
+  margin-top: 300px;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
   z-index: 1;
+
+  & > p {
+    padding-bottom: 10px;
+    color: ${theme.colors.white};
+  }
+
+  & > h1 {
+    max-width: 650px;
+    padding-bottom: 10px;
+  }
+
+  & > button {
+    margin-top: 16px;
+  }
+
+  & > img {
+    margin-top: 200px;
+  }
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
+    margin-top: 135px;
+  }
 `;
