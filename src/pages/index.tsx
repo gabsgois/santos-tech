@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import Layout from '../Layout';
 import { Hero } from '../container';
 import Contact from '../container/Contact/Contact';
+import Partners from '../container/Partners/Partners';
 import Solutions from '../container/Solutions/Solutions';
 
 const AppPage: NextPage = () => {
@@ -18,6 +19,8 @@ const AppPage: NextPage = () => {
       <Solutions />
 
       {/* <Video src="/video.mp4" loop controls autoPlay /> */}
+
+      <Partners />
       <Contact />
     </Layout>
   );

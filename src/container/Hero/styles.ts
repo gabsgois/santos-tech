@@ -41,6 +41,7 @@ export const Container = styled(ContainerGrid)`
 
   & > button {
     margin-top: 16px;
+    margin-inline: 0;
   }
 
   & > img {
