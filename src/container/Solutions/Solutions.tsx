@@ -1,6 +1,9 @@
 import React from 'react';
 import { Navigation, Pagination } from 'swiper';
-import { SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+import Link from 'next/link';
+import { BsWhatsapp } from 'react-icons/bs';
 import {
   image1,
   image2,
@@ -12,10 +15,16 @@ import {
   image8,
 } from '../../assets/solutions';
 import { Container, Text } from '../../components';
-import { Btn } from '../../components/Button/styles';
 import { useWindowSize } from '../../providers';
 import theme from '../../theme/theme';
-import { BoxCards, Card, Section, SwiperReact } from './styles';
+import {
+  BoxCards,
+  BoxWhats,
+  Card,
+  Section,
+  SwiperReact,
+  SwiperSlide,
+} from './styles';
 
 const data = [
   {
@@ -53,7 +62,7 @@ const data = [
 ];
 
 const Solutions: React.FC = () => {
-  const isDesktop = useWindowSize();
+  const { isDesktop } = useWindowSize();
 
   return (
     <Section>
@@ -84,26 +93,32 @@ const Solutions: React.FC = () => {
             pagination
             navigation
             modules={[Navigation, Pagination]}
-            spaceBetween={30}
+            spaceBetween={8}
           >
-            <SwiperSlide>
-              <BoxCards>
-                {data.map(item => (
-                  <Card>
-                    <img src={item.img} alt="" />
-                    <Text as="h4" variant="h4Desktop">
-                      {item.description}
-                    </Text>
-                  </Card>
-                ))}
-              </BoxCards>
-            </SwiperSlide>
+            {data.map(item => (
+              <SwiperSlide>
+                <Card>
+                  <img src={item.img} alt="" />
+                  <Text as="h4" variant="h4Desktop">
+                    {item.description}
+                  </Text>
+                </Card>
+              </SwiperSlide>
+            ))}
           </SwiperReact>
         )}
 
-        <Btn mt={48} size="medium" color="greenDark">
-          Solicite um orçamento
-        </Btn>
+        <BoxWhats>
+          <Link
+            href="https://api.whatsapp.com/send?phone=5513981720623&text=Ol%C3%A1,%20acessei%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!"
+            passHref
+          >
+            <a target="_blank" rel="noopener noreferrer">
+              Solicite um orçamento
+              <BsWhatsapp />
+            </a>
+          </Link>
+        </BoxWhats>
       </Container>
     </Section>
   );
