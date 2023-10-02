@@ -20,10 +20,10 @@ const variant = {
     background-color: ${theme.colors.green.dark};
     border-radius: 50px;
     border: 1px solid ${theme.colors.green.dark};
-    color: ${theme.colors.white};
+    color: ${theme.colors.cream};
 
     &:hover {
-      background-color: ${theme.colors.white};
+      background-color: ${theme.colors.cream};
       color: ${theme.colors.green.dark};
     }
   `,

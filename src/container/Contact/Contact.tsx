@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
   const isDesktop = useWindowSize();
 
   return (
-    <Section>
+    <Section data-header="contact">
       <Container>
         <Text variant="spanSmall" color={theme.colors.cream}>
           CONTATO
