@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import React from 'react';
 import { BsWhatsapp } from 'react-icons/bs';
 import { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import { icon, image1 } from '../../assets/depositions';
-import { Button, Text } from '../../components';
+import { Text } from '../../components';
 import { useWindowSize } from '../../providers';
 import theme from '../../theme';
 import {
@@ -253,15 +254,15 @@ const Depositions: React.FC = () => {
           </SwiperReact>
         </BoxClients>
 
-        <Button
-          color="greenDark"
-          size={isDesktop ? 'large' : 'full'}
-          mt={80}
-          icon
+        <Link
+          href="https://api.whatsapp.com/send?phone=5513981720623&text=Ol%C3%A1,%20acessei%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!"
+          passHref
         >
-          Seja um cliente Santos Telecom
-          <BsWhatsapp />
-        </Button>
+          <a target="_blank" rel="noopener noreferrer">
+            Seja um cliente Santos Telecom
+            <BsWhatsapp />
+          </a>
+        </Link>
       </Container>
     </Section>
   );

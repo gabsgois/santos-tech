@@ -15,8 +15,7 @@ export const Section = styled.section`
   background-position-x: 1264px;
   background-position-y: 63px; */
   object-fit: cover;
-  padding-top: 72px;
-  padding-bottom: 202px;
+  padding-block: 72px;
 `;
 
 export const Container = styled(ContainerGrid)`
@@ -24,6 +23,33 @@ export const Container = styled(ContainerGrid)`
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: top;
+
+  a {
+    ${theme.typography.button}
+    align-items: center;
+    background-color: ${theme.colors.green.dark};
+    border-radius: 50px;
+    border: 1px solid ${theme.colors.white};
+    color: ${theme.colors.cream};
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    max-width: 340px;
+    padding: 14px;
+    margin-top: 80px;
+    margin-inline: auto;
+
+    &:hover {
+      background-color: ${theme.colors.cream};
+      color: ${theme.colors.green.dark};
+      border: 1px solid ${theme.colors.green.dark};
+    }
+
+    @media (max-width: ${theme.breakpoints.desktop.px}) {
+      max-width: 375px;
+      width: 100%;
+    }
+  }
 
   @media (max-width: ${theme.breakpoints.desktop.px}) {
     background-image: none;
@@ -43,9 +69,6 @@ export const SwiperReact = styled(Swiper)`
     width: 54px;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: ${theme.colors.green.dark}; */
-    /* color: ${theme.colors.white}; */
-    /* border-radius: 50%; */
 
     &::after {
       display: none;
