@@ -7,7 +7,7 @@ import { BoxTitle, Container, Section } from './styles';
 
 const About: React.FC = () => {
   return (
-    <Section>
+    <Section data-header="about">
       <Container>
         <BoxTitle>
           <Text variant="spanSmall" color={theme.colors.cream}>

@@ -22,7 +22,7 @@ const Partners: React.FC = () => {
   const { isDesktop } = useWindowSize();
 
   return (
-    <Section>
+    <Section data-header="partners">
       <Container>
         <Text
           variant="spanSmall"
@@ -47,23 +47,23 @@ const Partners: React.FC = () => {
           spaceBetween={30}
         >
           <SwiperSlide>
-            <img src={interbras} alt="" />
+            <img src={interbras} alt="Logo Intelbras" />
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src={panasonic} alt="" />
+            <img src={panasonic} alt="Logo Panasonic" />
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src={ppa} alt="" />
+            <img src={ppa} alt="Logo PPA" />
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src={siemens} alt="" />
+            <img src={siemens} alt="Logo Siemens" />
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src={ubiquiti} alt="" />
+            <img src={ubiquiti} alt="Logo Ubiquiti" />
           </SwiperSlide>
 
           <SwiperSlide>

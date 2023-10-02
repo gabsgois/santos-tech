@@ -65,7 +65,7 @@ const Solutions: React.FC = () => {
   const { isDesktop } = useWindowSize();
 
   return (
-    <Section>
+    <Section data-header="solutions">
       <Container>
         <Text variant="spanSmall">Soluções</Text>
         <Text
