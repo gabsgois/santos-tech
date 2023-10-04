@@ -29,16 +29,12 @@ export const SwiperReact = styled(Swiper)`
     width: 54px;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: ${theme.colors.green.dark}; */
-    /* color: ${theme.colors.white}; */
-    /* border-radius: 50%; */
 
     &::after {
       display: none;
     }
 
     @media (max-width: ${theme.breakpoints.desktop.px}) {
-      /* display: none; */
     }
   }
 
