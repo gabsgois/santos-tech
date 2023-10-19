@@ -1,8 +1,5 @@
-import React from 'react';
-import { Navigation, Pagination } from 'swiper';
-import 'swiper/css';
-// import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
+import React from 'react';
 import { BsWhatsapp } from 'react-icons/bs';
 import {
   image1,
@@ -17,14 +14,17 @@ import {
 import { Container, Text } from '../../components';
 import { useWindowSize } from '../../providers';
 import theme from '../../theme/theme';
-import {
-  BoxCards,
-  BoxWhats,
-  Card,
-  Section,
-  SwiperReact,
-  SwiperSlide,
-} from './styles';
+import { BoxCards, BoxWhats, Card, Section } from './styles';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import required modules
+import { Pagination } from 'swiper/modules';
 
 const data = [
   {
@@ -88,15 +88,16 @@ const Solutions: React.FC = () => {
             ))}
           </BoxCards>
         ) : (
-          <SwiperReact
-            slidesPerView={1}
-            pagination
-            navigation
-            modules={[Navigation, Pagination]}
-            spaceBetween={8}
+          <Swiper
+            slidesPerView={'auto'}
+            spaceBetween={30}
+            pagination={{
+              type: 'progressbar',
+            }}
+            modules={[Pagination]}
           >
             {data.map(item => (
-              <SwiperSlide>
+              <SwiperSlide style={{ maxWidth: 'fit-content' }}>
                 <Card>
                   <img src={item.img} alt="" />
                   <Text as="h4" variant="h4Desktop">
@@ -105,7 +106,7 @@ const Solutions: React.FC = () => {
                 </Card>
               </SwiperSlide>
             ))}
-          </SwiperReact>
+          </Swiper>
         )}
 
         <BoxWhats>
