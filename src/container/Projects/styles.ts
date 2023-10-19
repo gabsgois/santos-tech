@@ -27,6 +27,8 @@ export const Container = styled(ContainerGrid)`
 
   @media (max-width: ${theme.breakpoints.desktop.px}) {
     background-image: url(${bgMob});
+    max-width: 375px;
+    width: 100%;
   }
 `;
 
@@ -47,6 +49,10 @@ export const SwiperReact = styled(Swiper)`
     background-size: cover;
 
     &::after {
+      display: none;
+    }
+
+    @media (max-width: ${theme.breakpoints.desktop.px}) {
       display: none;
     }
   }
@@ -104,6 +110,8 @@ export const Slides = styled.div`
 export const SwiperSlide = styled(SwiperSlideReact)`
   @media (max-width: ${theme.breakpoints.desktop.px}) {
     border-bottom: 1px solid ${theme.colors.purple};
+    max-width: 375px;
+    width: 100%;
   }
 `;
 
@@ -120,5 +128,8 @@ export const BoxSlides = styled.div`
 
   & > img {
     margin-top: -35px;
+  }
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
   }
 `;
