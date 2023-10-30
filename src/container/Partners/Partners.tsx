@@ -1,6 +1,6 @@
 import React from 'react';
-import { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
+import { Navigation, Pagination } from 'swiper/modules';
 import {
   interbras,
   panasonic,

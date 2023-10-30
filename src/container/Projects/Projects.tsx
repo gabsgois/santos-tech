@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import { imageProjects } from '../../assets/projects';
 import { Lightbox, Text } from '../../components';
 import { useWindowSize } from '../../providers';
