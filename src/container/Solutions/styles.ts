@@ -1,8 +1,4 @@
 import styled from 'styled-components';
-import {
-  Swiper,
-  SwiperSlide as SwiperSlideReact,
-} from 'swiper/react';
 import { bgSolutions } from '../../assets/solutions';
 import theme from '../../theme/theme';
 import { Container as ContainerGrid } from './../Hero/styles';
@@ -57,105 +53,103 @@ export const BoxCards = styled.div`
 `;
 
 export const Card = styled.div`
-  margin-bottom: 30px;
+  background-color: ${theme.colors.white};
+  border-radius: 15px;
+  padding: 10px;
+  position: relative;
 
   & > img {
     border-radius: 15px;
-    border: 10px solid ${theme.colors.white};
-
-    @media (max-width: ${theme.breakpoints.desktop.px}) {
-      margin-bottom: 30px;
-    }
+    height: 100%;
+    object-fit: cover;
   }
 
   & > h4 {
+    bottom: 10px;
     color: ${theme.colors.white};
-    margin-top: -90px;
-    max-width: 250px;
-    padding-left: 16px;
-
-    @media (max-width: ${theme.breakpoints.desktop.px}) {
-      margin-top: -119px;
-    }
+    left: 10px;
+    padding: 16px;
+    position: absolute;
+    width: calc(100% - 20px);
   }
 `;
 
-export const SwiperReact = styled(Swiper)`
-  /* position: relative; */
-  /* background-color: ${theme.colors.purple};
-  padding-bottom: 30px;
-  padding-inline: 27px;
-  width: calc(100% + 54px);
-  left: 50%;
-  transform: translateX(-50%); */
+// export const SwiperReact = styled(Swiper)`
+//   /* position: relative; */
+//   /* background-color: ${theme.colors.purple};
+//   padding-bottom: 30px;
+//   padding-inline: 27px;
+//   width: calc(100% + 54px);
+//   left: 50%;
+//   transform: translateX(-50%); */
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    /* height: 54px;
-    width: 54px;
-    background-repeat: no-repeat;
-    background-size: cover; */
+//   .swiper-button-next,
+//   .swiper-button-prev {
+//     /* height: 54px;
+//     width: 54px;
+//     background-repeat: no-repeat;
+//     background-size: cover; */
 
-    &::after {
-      display: none;
-    }
+//     &::after {
+//       display: none;
+//     }
 
-    @media (max-width: ${theme.breakpoints.desktop.px}) {
-      /* display: none; */
-    }
-  }
+//     @media (max-width: ${theme.breakpoints.desktop.px}) {
+//       /* display: none; */
+//     }
+//   }
 
-  .swiper-button-next {
-    right: 0;
-  }
+//   .swiper-button-next {
+//     right: 0;
+//   }
 
-  .swiper-button-prev {
-    left: 0;
-  }
+//   .swiper-button-prev {
+//     left: 0;
+//   }
 
-  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 0;
-    display: none;
+//   .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+//     bottom: 0;
+//     display: none;
 
-    @media (max-width: ${theme.breakpoints.desktop.px}) {
-      display: block;
-      margin: 0 auto;
-    }
+//     @media (max-width: ${theme.breakpoints.desktop.px}) {
+//       display: block;
+//       margin: 0 auto;
+//     }
 
-    .swiper-pagination-bullet {
-      /* background-color: ${theme.colors.white};
-      border: 1px solid ${theme.colors.white};
-      border-radius: 0;
-      height: 6px;
-      opacity: 1;
-      width: 6px; */
+//     .swiper-pagination-bullet {
+//       /* background-color: ${theme.colors.white};
+//       border: 1px solid ${theme.colors.white};
+//       border-radius: 0;
+//       height: 6px;
+//       opacity: 1;
+//       width: 6px; */
 
-      &.swiper-pagination-bullet-active {
-        /* background-color: ${theme.colors.white};
-        position: relative; */
+//       &.swiper-pagination-bullet-active {
+//         /* background-color: ${theme.colors.white};
+//         position: relative; */
 
-        &::before {
-          /* background-color: transparent;
-          content: '';
-          height: 12px;
-          left: -4px;
-          position: absolute;
-          top: -4px;
-          width: 12px; */
-        }
-      }
-    }
-  }
-`;
+//         &::before {
+//           /* background-color: transparent;
+//           content: '';
+//           height: 12px;
+//           left: -4px;
+//           position: absolute;
+//           top: -4px;
+//           width: 12px; */
+//         }
+//       }
+//     }
+//   }
+// `;
 
-export const SwiperSlide = styled(SwiperSlideReact)`
-  display: flex;
-  gap: 8px;
+// export const SwiperSlide = styled(SwiperSlideReact)`
+//   display: flex;
+//   gap: 8px;
 
-  @media (max-width: ${theme.breakpoints.desktop.px}) {
-    border-bottom: 1px solid ${theme.colors.gray};
-  }
-`;
+//   @media (max-width: ${theme.breakpoints.desktop.px}) {
+//     border-bottom: 1px solid ${theme.colors.gray};
+//   }
+// `;
 
 export const BoxWhats = styled.div`
   display: flex;
