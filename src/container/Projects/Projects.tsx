@@ -10,7 +10,6 @@ import {
   BoxTitle,
   Container,
   Section,
-  Slides,
   SwiperReact,
   SwiperSlide,
 } from './styles';
@@ -66,35 +65,34 @@ const Projects: React.FC = () => {
         </BoxTitle>
 
         <SwiperReact
-          slidesPerView={1}
+          slidesPerView="auto"
           navigation
           pagination={!isDesktop}
           modules={[Navigation, Pagination]}
-          spaceBetween={30}
+          spaceBetween={40}
+          loop
         >
           {data.map(item => (
             <SwiperSlide>
-              <Slides key={item.id}>
-                <BoxSlides>
-                  <img src={item.img} alt="" />
+              <BoxSlides key={item.id}>
+                <img src={item.img} alt="" />
 
-                  <BoxText>
-                    <Text
-                      variant="h4Desktop"
-                      color={theme.colors.cream}
-                    >
-                      {item.title}
-                    </Text>
+                <BoxText>
+                  <Text
+                    variant="h4Desktop"
+                    color={theme.colors.cream}
+                  >
+                    {item.title}
+                  </Text>
 
-                    <Text
-                      variant="body"
-                      color={theme.colors.cream}
-                    >
-                      {item.description}
-                    </Text>
-                  </BoxText>
-                </BoxSlides>
-              </Slides>
+                  <Text
+                    variant="body"
+                    color={theme.colors.cream}
+                  >
+                    {item.description}
+                  </Text>
+                </BoxText>
+              </BoxSlides>
             </SwiperSlide>
           ))}
         </SwiperReact>

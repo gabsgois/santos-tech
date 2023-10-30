@@ -40,6 +40,8 @@ export const SwiperReact = styled(Swiper)`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 27px;
+  padding-block: 10px;
 
   .swiper-button-next,
   .swiper-button-prev {
@@ -47,6 +49,8 @@ export const SwiperReact = styled(Swiper)`
     width: 54px;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.2s ease-in-out;
+    transform: translateX(-50%);
 
     &::after {
       display: none;
@@ -58,7 +62,7 @@ export const SwiperReact = styled(Swiper)`
   }
 
   .swiper-button-next {
-    right: 280px;
+    left: 75%;
     position: absolute;
     background-image: url(${buttonRight});
     background-repeat: no-repeat;
@@ -67,7 +71,7 @@ export const SwiperReact = styled(Swiper)`
   }
 
   .swiper-button-prev {
-    left: -20px;
+    left: 27px;
     position: absolute;
     background-image: url(${buttonLeft});
     background-repeat: no-repeat;
@@ -76,8 +80,29 @@ export const SwiperReact = styled(Swiper)`
   }
 `;
 
-export const Slides = styled.div`
-  align-items: center;
+// export const Slides = styled.div`
+//   align-items: center;
+
+//   & > img {
+//     display: block;
+//     height: auto;
+//     margin-inline: auto;
+//     object-fit: cover;
+
+//     @media (max-width: ${theme.breakpoints.desktop.px}) {
+//       height: auto;
+//     }
+//   }
+
+//   @media (max-width: ${theme.breakpoints.desktop.px}) {
+//     flex-direction: column;
+//     height: auto;
+//     padding-block: 24px;
+//     padding-inline: 0;
+//   }
+// `;
+
+export const SwiperSlide = styled(SwiperSlideReact)`
   border: 1px solid ${theme.colors.green.main};
   display: flex;
   border-radius: 25px;
@@ -85,29 +110,11 @@ export const Slides = styled.div`
     1px 1px 2px 0px rgba(36, 49, 38, 0.25),
     -2px -2px 2px 0px rgba(69, 89, 73, 0.5),
     -6px -6px 6px 0px rgba(46, 81, 54, 0.25);
-  width: 870px;
+  width: 75%;
   height: 566px;
+  padding: 10px;
+  background-color: ${theme.colors.green.main};
 
-  & > img {
-    display: block;
-    height: auto;
-    margin-inline: auto;
-    object-fit: cover;
-
-    @media (max-width: ${theme.breakpoints.desktop.px}) {
-      height: auto;
-    }
-  }
-
-  @media (max-width: ${theme.breakpoints.desktop.px}) {
-    flex-direction: column;
-    height: auto;
-    padding-block: 24px;
-    padding-inline: 0;
-  }
-`;
-
-export const SwiperSlide = styled(SwiperSlideReact)`
   @media (max-width: ${theme.breakpoints.desktop.px}) {
     border-bottom: 1px solid ${theme.colors.purple};
     max-width: 375px;
@@ -125,10 +132,6 @@ export const BoxSlides = styled.div`
   flex-direction: column;
   gap: 24px;
   margin-inline: auto;
-
-  & > img {
-    margin-top: -35px;
-  }
 
   @media (max-width: ${theme.breakpoints.desktop.px}) {
   }
