@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import { BsWhatsapp } from 'react-icons/bs';
-import { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
+import { Navigation, Pagination } from 'swiper/modules';
 import { icon, image1 } from '../../assets/depositions';
 import { Text } from '../../components';
 import { useWindowSize } from '../../providers';

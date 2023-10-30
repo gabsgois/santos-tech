@@ -3,7 +3,15 @@ import 'aos/dist/aos.css';
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import Layout from '../Layout';
-import Solutions from '../container/Solutions/Solutions';
+import {
+  About,
+  Contact,
+  Depositions,
+  Hero,
+  Partners,
+  Projects,
+  Solutions,
+} from '../container';
 
 const AppPage: NextPage = () => {
   useEffect(() => {
@@ -12,13 +20,13 @@ const AppPage: NextPage = () => {
 
   return (
     <Layout>
-      {/* <Hero /> */}
+      <Hero />
       <Solutions />
-      {/* <About /> */}
-      {/* <Video src="/video.mp4" loop controls autoPlay /> */}
-      {/* <Depositions />
+      <About />
+      <Projects />
+      <Depositions />
       <Partners />
-      <Contact /> */}
+      <Contact />
     </Layout>
   );
 };
