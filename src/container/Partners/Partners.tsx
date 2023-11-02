@@ -1,6 +1,5 @@
 import React from 'react';
 import 'swiper/css';
-import { Navigation, Pagination } from 'swiper/modules';
 import {
   interbras,
   panasonic,
@@ -13,13 +12,21 @@ import { useWindowSize } from '../../providers';
 import theme from '../../theme/theme';
 import {
   Container,
+  Scroller,
+  ScrollerItem,
   Section,
-  SwiperReact,
-  SwiperSlide,
 } from './styles';
 
 const Partners: React.FC = () => {
   const { isDesktop } = useWindowSize();
+
+  const listPartners = [
+    interbras,
+    panasonic,
+    ppa,
+    siemens,
+    ubiquiti,
+  ];
 
   return (
     <Section data-header="partners">
@@ -38,55 +45,23 @@ const Partners: React.FC = () => {
         >
           Empresas que trabalhamos em colaboração
         </Text>
-
-        <SwiperReact
-          slidesPerView={isDesktop ? 6 : 2}
-          navigation={isDesktop}
-          pagination
-          modules={[Navigation, Pagination]}
-          spaceBetween={30}
-        >
-          <SwiperSlide>
-            <img src={interbras} alt="Logo Intelbras" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={panasonic} alt="Logo Panasonic" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={ppa} alt="Logo PPA" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={siemens} alt="Logo Siemens" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={ubiquiti} alt="Logo Ubiquiti" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={interbras} alt="" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={panasonic} alt="" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={ppa} alt="" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={siemens} alt="" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={ubiquiti} alt="" />
-          </SwiperSlide>
-        </SwiperReact>
       </Container>
+
+      <Scroller>
+        <div>
+          {listPartners.map(partner => (
+            <ScrollerItem key={partner.key}>
+              <img src={partner} alt={partner.key} />
+            </ScrollerItem>
+          ))}
+
+          {listPartners.map(partner => (
+            <ScrollerItem key={partner.key}>
+              <img src={partner} alt={partner.key} />
+            </ScrollerItem>
+          ))}
+        </div>
+      </Scroller>
     </Section>
   );
 };

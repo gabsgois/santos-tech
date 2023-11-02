@@ -57,6 +57,7 @@ export const Card = styled.div`
   border-radius: 15px;
   padding: 10px;
   position: relative;
+  display: grid;
 
   & > img {
     border-radius: 15px;
