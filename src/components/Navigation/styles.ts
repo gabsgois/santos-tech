@@ -22,7 +22,7 @@ export const BoxContainer = styled.div`
   }
 
   @media (max-width: ${theme.breakpoints.desktop.px}) {
-    padding: 16px 20px 40px;
+    padding-block: 16px;
   }
 `;
 
@@ -173,6 +173,16 @@ export const ButtonNav = styled.button<ButtonNavProps>`
       padding: 12px 30px;
       display: flex;
       gap: 8px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        background-color: ${theme.colors.white};
+        color: ${theme.colors.green.main};
+      }
 
       @media (max-width: ${theme.breakpoints.desktop.px}) {
         background-color: ${theme.colors.white};

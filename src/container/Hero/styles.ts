@@ -41,10 +41,16 @@ export const Container = styled(ContainerGrid)`
 
   & > button {
     margin-top: 16px;
+    position: absolute;
+    left: 0;
+
+    @media (max-width: ${theme.breakpoints.desktop.px}) {
+      position: relative;
+    }
   }
 
   & > img {
-    margin-top: 200px;
+    margin-top: 140px;
   }
 
   @media (max-width: ${theme.breakpoints.desktop.px}) {

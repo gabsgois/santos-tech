@@ -17,7 +17,7 @@ import {
 } from './styles';
 
 const Contact: React.FC = () => {
-  const isDesktop = useWindowSize();
+  const { isDesktop } = useWindowSize();
 
   return (
     <Section data-header="contact">
@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
           CONTATO
         </Text>
         <Text
-          variant="h2Desktop"
+          variant={isDesktop ? 'h2Desktop' : 'h2Mobile'}
           color={theme.colors.cream}
           mb={16}
         >

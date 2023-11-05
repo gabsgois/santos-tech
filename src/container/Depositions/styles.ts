@@ -36,7 +36,7 @@ export const Container = styled(ContainerGrid)`
     justify-content: center;
     max-width: 340px;
     padding: 14px;
-    margin-top: 80px;
+    margin-top: 41px;
     margin-inline: auto;
 
     &:hover {
@@ -48,6 +48,7 @@ export const Container = styled(ContainerGrid)`
     @media (max-width: ${theme.breakpoints.desktop.px}) {
       max-width: 375px;
       width: 100%;
+      margin-top: 0;
     }
   }
 
@@ -62,6 +63,31 @@ export const SwiperReact = styled(Swiper)`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 27px;
+  padding-right: 27px;
+  padding-block: 10px;
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
+    padding: 10px;
+  }
+
+  .swiper-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    margin-top: 520px;
+
+    @media (max-width: ${theme.breakpoints.desktop.px}) {
+      background-color: ${theme.colors.gray.dark};
+      border-radius: 10px;
+    }
+  }
+
+  .swiper-pagination-progressbar-fill {
+    background-color: ${theme.colors.green.main};
+    border-radius: 10px;
+  }
 
   .swiper-button-next,
   .swiper-button-prev {
@@ -69,13 +95,15 @@ export const SwiperReact = styled(Swiper)`
     width: 54px;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.2s ease-in-out;
+    transform: translateX(-50%);
 
     &::after {
       display: none;
     }
 
     @media (max-width: ${theme.breakpoints.desktop.px}) {
-      /* display: none; */
+      padding: 0;
     }
   }
 
@@ -84,7 +112,7 @@ export const SwiperReact = styled(Swiper)`
     background-repeat: no-repeat;
     cursor: pointer;
     position: absolute;
-    right: -20px;
+    left: 97%;
     top: 98px;
     z-index: 1;
   }
@@ -93,7 +121,7 @@ export const SwiperReact = styled(Swiper)`
     background-image: url(${btnPrev});
     background-repeat: no-repeat;
     cursor: pointer;
-    left: -20px;
+    left: 27px;
     position: absolute;
     top: 98px;
     z-index: 1;
@@ -101,11 +129,6 @@ export const SwiperReact = styled(Swiper)`
 `;
 
 export const SwiperSlide = styled(SwiperSlideReact)`
-  @media (max-width: ${theme.breakpoints.desktop.px}) {
-  }
-`;
-
-export const BoxCard = styled.div`
   width: 100%;
   max-width: 371px;
   height: 490px;
@@ -115,6 +138,23 @@ export const BoxCard = styled.div`
     1px 1px 2px 0px #cbc8c4,
     -2px -2px 2px 0px rgba(255, 248, 240, 0.5),
     -6px -6px 6px 0px rgba(255, 237, 219, 0.25);
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
+    max-width: 375px;
+    width: 100%;
+  }
+`;
+
+export const BoxCard = styled.div`
+  /* width: 100%;
+  max-width: 371px;
+  height: 490px;
+  border-radius: 25px;
+  background-color: ${theme.colors.cream};
+  box-shadow: 5px 5px 7px 0px rgba(184, 175, 167, 0.25),
+    1px 1px 2px 0px #cbc8c4,
+    -2px -2px 2px 0px rgba(255, 248, 240, 0.5),
+    -6px -6px 6px 0px rgba(255, 237, 219, 0.25); */
 `;
 
 export const BoxImage = styled.div`
@@ -125,6 +165,7 @@ export const BoxImage = styled.div`
   border-radius: 15px;
   margin-top: 10px;
   position: relative;
+  padding-inline: 10px;
 
   & > img:nth-child(2) {
     position: absolute;

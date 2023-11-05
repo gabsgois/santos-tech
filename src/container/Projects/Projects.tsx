@@ -33,6 +33,24 @@ const data = [
     title: 'Clínica Dentária',
     description: 'Instalação de câmeras, interfones e automação',
   },
+  {
+    id: 1,
+    img: imageProjects,
+    title: 'Condomínio Washington Luis',
+    description: 'Instalação de câmeras',
+  },
+  {
+    id: 2,
+    img: imageProjects,
+    title: 'Almai - Clínica especializada em Autismo',
+    description: 'Instalação de Computadores e rede',
+  },
+  {
+    id: 3,
+    img: imageProjects,
+    title: 'Clínica Dentária',
+    description: 'Instalação de câmeras, interfones e automação',
+  },
 ];
 
 const Projects: React.FC = () => {
@@ -44,7 +62,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <Section>
+    <Section data-header="projects">
       <Container>
         <BoxTitle>
           <Text
@@ -56,7 +74,7 @@ const Projects: React.FC = () => {
           </Text>
 
           <Text
-            variant="h2Desktop"
+            variant={isDesktop ? 'h2Desktop' : 'h2Mobile'}
             color={theme.colors.cream}
             mb={42}
           >
@@ -67,7 +85,10 @@ const Projects: React.FC = () => {
         <SwiperReact
           slidesPerView="auto"
           navigation
-          pagination={!isDesktop}
+          // pagination={!isDesktop }
+          pagination={{
+            type: 'progressbar',
+          }}
           modules={[Navigation, Pagination]}
           spaceBetween={40}
           loop

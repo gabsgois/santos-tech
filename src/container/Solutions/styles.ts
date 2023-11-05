@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Swiper } from 'swiper/react';
 import { bgSolutions } from '../../assets/solutions';
 import theme from '../../theme/theme';
 import { Container as ContainerGrid } from './../Hero/styles';
@@ -8,6 +9,10 @@ export const Section = styled.section`
   background-position-x: center;
   padding-bottom: 72px;
   padding-top: 72px;
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
+    padding-top: 24px;
+  }
 `;
 
 export const Container = styled(ContainerGrid)`
@@ -31,6 +36,11 @@ export const Container = styled(ContainerGrid)`
       color: ${theme.colors.green.dark};
     }
 
+    & > div {
+      display: flex;
+      justify-content: space-between;
+    }
+
     @media (max-width: ${theme.breakpoints.desktop.px}) {
       max-width: 375px;
       width: 100%;
@@ -39,6 +49,19 @@ export const Container = styled(ContainerGrid)`
 
   & > button {
     margin-inline: 0;
+  }
+`;
+
+export const BoxText = styled.div``;
+
+export const BoxHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
+    flex-direction: column-reverse;
   }
 `;
 
@@ -75,82 +98,25 @@ export const Card = styled.div`
   }
 `;
 
-// export const SwiperReact = styled(Swiper)`
-//   /* position: relative; */
-//   /* background-color: ${theme.colors.purple};
-//   padding-bottom: 30px;
-//   padding-inline: 27px;
-//   width: calc(100% + 54px);
-//   left: 50%;
-//   transform: translateX(-50%); */
+export const SwiperReact = styled(Swiper)`
+  .swiper-wrapper {
+    margin-bottom: 50px;
+  }
 
-//   .swiper-button-next,
-//   .swiper-button-prev {
-//     /* height: 54px;
-//     width: 54px;
-//     background-repeat: no-repeat;
-//     background-size: cover; */
+  .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    margin-top: 430px;
 
-//     &::after {
-//       display: none;
-//     }
+    @media (max-width: ${theme.breakpoints.desktop.px}) {
+      background-color: ${theme.colors.gray.dark};
+      border-radius: 10px;
+    }
+  }
 
-//     @media (max-width: ${theme.breakpoints.desktop.px}) {
-//       /* display: none; */
-//     }
-//   }
-
-//   .swiper-button-next {
-//     right: 0;
-//   }
-
-//   .swiper-button-prev {
-//     left: 0;
-//   }
-
-//   .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-//     bottom: 0;
-//     display: none;
-
-//     @media (max-width: ${theme.breakpoints.desktop.px}) {
-//       display: block;
-//       margin: 0 auto;
-//     }
-
-//     .swiper-pagination-bullet {
-//       /* background-color: ${theme.colors.white};
-//       border: 1px solid ${theme.colors.white};
-//       border-radius: 0;
-//       height: 6px;
-//       opacity: 1;
-//       width: 6px; */
-
-//       &.swiper-pagination-bullet-active {
-//         /* background-color: ${theme.colors.white};
-//         position: relative; */
-
-//         &::before {
-//           /* background-color: transparent;
-//           content: '';
-//           height: 12px;
-//           left: -4px;
-//           position: absolute;
-//           top: -4px;
-//           width: 12px; */
-//         }
-//       }
-//     }
-//   }
-// `;
-
-// export const SwiperSlide = styled(SwiperSlideReact)`
-//   display: flex;
-//   gap: 8px;
-
-//   @media (max-width: ${theme.breakpoints.desktop.px}) {
-//     border-bottom: 1px solid ${theme.colors.gray};
-//   }
-// `;
+  .swiper-pagination-progressbar-fill {
+    background-color: ${theme.colors.green.main};
+    border-radius: 10px;
+  }
+`;
 
 export const BoxWhats = styled.div`
   display: flex;
