@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FaChevronDown } from 'react-icons/fa';
 import { scroll } from '../../assets/hero';
 import { Button, Text } from '../../components';
 import { goNextSection, useWindowSize } from '../../providers';
@@ -33,7 +32,6 @@ const Hero: React.FC = () => {
           onClick={() => handleClick('solutions')}
         >
           Conheça nossas soluções
-          <FaChevronDown />
         </Button>
 
         {isDesktop && <img src={scroll} alt="imagem hero" />}
