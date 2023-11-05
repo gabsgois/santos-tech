@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
             color={theme.colors.gray.light}
           >
             ©2023. Todos os direitos reservados.
-            <Link href="/" passHref>
+            <Link href="/privacy-policy" passHref>
               <a target="_blank" rel="noopener noreferrer">
                 <br />
                 Política de Privacidade.

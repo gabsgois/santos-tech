@@ -15,6 +15,10 @@ import theme from '../../theme';
 export const Section = styled.section`
   background-color: ${theme.colors.green.main};
   padding-block: 72px;
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
+    padding-block: 0;
+  }
 `;
 
 export const Container = styled(ContainerGrid)`
@@ -29,6 +33,8 @@ export const Container = styled(ContainerGrid)`
     background-image: url(${bgMob});
     max-width: 375px;
     width: 100%;
+    padding-top: 56px;
+    padding-bottom: 36px;
   }
 `;
 
@@ -42,6 +48,29 @@ export const SwiperReact = styled(Swiper)`
   justify-content: center;
   padding-left: 27px;
   padding-block: 10px;
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
+    padding: 10px;
+  }
+
+  .swiper-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    margin-top: 620px;
+
+    @media (max-width: ${theme.breakpoints.desktop.px}) {
+      background-color: ${theme.colors.gray.dark};
+      border-radius: 10px;
+      margin-top: 420px;
+    }
+  }
+
+  .swiper-pagination-progressbar-fill {
+    background-color: ${theme.colors.cream};
+    border-radius: 10px;
+  }
 
   .swiper-button-next,
   .swiper-button-prev {
@@ -119,12 +148,18 @@ export const SwiperSlide = styled(SwiperSlideReact)`
     border-bottom: 1px solid ${theme.colors.purple};
     max-width: 375px;
     width: 100%;
+    height: 373px;
   }
 `;
 
 export const BoxText = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: ${theme.breakpoints.desktop.px}) {
+    flex-direction: column;
+    gap: 8px;
+  }
 `;
 
 export const BoxSlides = styled.div`
@@ -132,6 +167,15 @@ export const BoxSlides = styled.div`
   flex-direction: column;
   gap: 24px;
   margin-inline: auto;
+
+  & > img {
+    @media (max-width: ${theme.breakpoints.desktop.px}) {
+      width: 315px;
+      height: 220px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+  }
 
   @media (max-width: ${theme.breakpoints.desktop.px}) {
   }

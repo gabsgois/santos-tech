@@ -39,7 +39,7 @@ const Partners: React.FC = () => {
           parceiros
         </Text>
         <Text
-          variant="h2Desktop"
+          variant={isDesktop ? 'h2Desktop' : 'h2Mobile'}
           color={theme.colors.green.dark}
           mb={42}
         >

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { BsWhatsapp } from 'react-icons/bs';
 import {
+  bgVetorSolutions,
   image1,
   image2,
   image3,
@@ -14,10 +15,18 @@ import {
 import { Container, Text } from '../../components';
 import { useWindowSize } from '../../providers';
 import theme from '../../theme/theme';
-import { BoxCards, BoxWhats, Card, Section } from './styles';
+import {
+  BoxCards,
+  BoxHeader,
+  BoxText,
+  BoxWhats,
+  Card,
+  Section,
+  SwiperReact,
+} from './styles';
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -67,14 +76,21 @@ const Solutions: React.FC = () => {
   return (
     <Section data-header="solutions">
       <Container>
-        <Text variant="spanSmall">Soluções</Text>
-        <Text
-          variant="h2Desktop"
-          color={theme.colors.green.dark}
-          mb={48}
-        >
-          Protegemos e facilitamos o que importa
-        </Text>
+        <BoxHeader>
+          <BoxText>
+            <Text variant="spanSmall">Soluções</Text>
+
+            <Text
+              variant={isDesktop ? 'h2Desktop' : 'h2Mobile'}
+              color={theme.colors.green.dark}
+              // mb={48}
+            >
+              Protegemos e facilitamos o que importa
+            </Text>
+          </BoxText>
+
+          <img src={bgVetorSolutions} alt="" />
+        </BoxHeader>
 
         {isDesktop ? (
           <BoxCards>
@@ -88,7 +104,7 @@ const Solutions: React.FC = () => {
             ))}
           </BoxCards>
         ) : (
-          <Swiper
+          <SwiperReact
             slidesPerView={'auto'}
             spaceBetween={30}
             pagination={{
@@ -106,7 +122,7 @@ const Solutions: React.FC = () => {
                 </Card>
               </SwiperSlide>
             ))}
-          </Swiper>
+          </SwiperReact>
         )}
 
         <BoxWhats>

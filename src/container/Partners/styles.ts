@@ -29,7 +29,7 @@ export const Scroller = styled.div`
   z-index: 1;
 
   & > div {
-    animation: ${keyframe} 60s linear infinite;
+    animation: ${keyframe} 15s linear infinite;
     display: flex;
     height: 100%;
     justify-content: space-between;

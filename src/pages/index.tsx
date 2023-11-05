@@ -27,6 +27,7 @@ const AppPage: NextPage = () => {
       <Depositions />
       <Partners />
       <Contact />
+      {/* <PrivacyPolicy /> */}
     </Layout>
   );
 };

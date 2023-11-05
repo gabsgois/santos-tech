@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaChevronDown } from 'react-icons/fa';
 import { scroll } from '../../assets/hero';
 import { Button, Text } from '../../components';
-import { useWindowSize } from '../../providers';
+import { goNextSection, useWindowSize } from '../../providers';
 import theme from '../../theme/theme';
 import { Container, ContainerHero } from './styles';
 
 const Hero: React.FC = () => {
-  const isDesktop = useWindowSize();
+  const { isDesktop } = useWindowSize();
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const handleClick = (key: string) => {
+    setOpenMenu(false);
+    goNextSection(key);
+  };
 
   return (
     <ContainerHero>
@@ -14,7 +21,7 @@ const Hero: React.FC = () => {
         <Text>SANTOS TECH</Text>
         <Text
           as="h1"
-          variant="h1Desktop"
+          variant={isDesktop ? 'h1Desktop' : 'h1Mobile'}
           color={theme.colors.white}
         >
           A segurança e conforto do seu patrimônio agora tem nome
@@ -23,11 +30,13 @@ const Hero: React.FC = () => {
         <Button
           color="transparent"
           size={isDesktop ? 'medium' : 'full'}
+          onClick={() => handleClick('solutions')}
         >
           Conheça nossas soluções
+          <FaChevronDown />
         </Button>
 
-        <img src={scroll} alt="" />
+        {isDesktop && <img src={scroll} alt="imagem hero" />}
       </Container>
     </ContainerHero>
   );

@@ -22,12 +22,95 @@ import {
 const Depositions: React.FC = () => {
   const { isDesktop } = useWindowSize();
 
+  const dataCard = [
+    {
+      image: image1,
+      icon: icon,
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+      name: 'Roberto Silva',
+      company: 'Almai',
+    },
+    {
+      image: image1,
+      icon: icon,
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+      name: 'Roberto Silva',
+      company: 'Almai',
+    },
+    {
+      image: image1,
+      icon: icon,
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+      name: 'Roberto Silva',
+      company: 'Almai',
+    },
+    {
+      image: image1,
+      icon: icon,
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+      name: 'Roberto Silva',
+      company: 'Almai',
+    },
+    {
+      image: image1,
+      icon: icon,
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+      name: 'Roberto Silva',
+      company: 'Almai',
+    },
+    {
+      image: image1,
+      icon: icon,
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+      name: 'Roberto Silva',
+      company: 'Almai',
+    },
+    {
+      image: image1,
+      icon: icon,
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+      name: 'Roberto Silva',
+      company: 'Almai',
+    },
+    {
+      image: image1,
+      icon: icon,
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+      name: 'Roberto Silva',
+      company: 'Almai',
+    },
+    {
+      image: image1,
+      icon: icon,
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+      name: 'Roberto Silva',
+      company: 'Almai',
+    },
+    {
+      image: image1,
+      icon: icon,
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+      name: 'Roberto Silva',
+      company: 'Almai',
+    },
+  ];
+
   return (
     <Section data-header="depositions">
       <Container>
         <Text variant="spanSmall">Depoimentos</Text>
         <Text
-          variant="h2Desktop"
+          variant={isDesktop ? 'h2Desktop' : 'h2Mobile'}
           color={theme.colors.green.dark}
           mb={48}
         >
@@ -38,219 +121,45 @@ const Depositions: React.FC = () => {
           <SwiperReact
             slidesPerView={isDesktop ? 3 : 1}
             navigation={isDesktop}
-            pagination
+            pagination={{
+              type: 'progressbar',
+            }}
             modules={[Navigation, Pagination]}
-            spaceBetween={30}
+            spaceBetween={36}
+            loop
           >
-            <SwiperSlide>
-              <BoxCard>
-                <BoxBox>
-                  <BoxImage>
-                    <img src={image1} alt="cliente" />
-                    <img src={icon} alt="aspas" />
-                  </BoxImage>
+            {dataCard.map(item => (
+              <SwiperSlide>
+                <BoxCard>
+                  <BoxBox>
+                    <BoxImage>
+                      <img src={item.image} alt="cliente" />
+                      <img src={item.icon} alt="aspas" />
+                    </BoxImage>
 
-                  <BoxText>
-                    <Text
-                      mb={16}
-                      color={theme.colors.green.dark}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis
-                      nostrud exercitation ullamco.
-                    </Text>
+                    <BoxText>
+                      <Text
+                        mb={16}
+                        color={theme.colors.green.dark}
+                      >
+                        {item.content}
+                      </Text>
 
-                    <Text
-                      mb={2}
-                      variant="h5Desktop"
-                      color={theme.colors.green.dark}
-                    >
-                      Pedro Calisto
-                    </Text>
-                    <Text color={theme.colors.green.dark}>
-                      Razer Brasil
-                    </Text>
-                  </BoxText>
-                </BoxBox>
-              </BoxCard>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <BoxCard>
-                <BoxBox>
-                  <BoxImage>
-                    <img src={image1} alt="cliente" />
-                    <img src={icon} alt="aspas" />
-                  </BoxImage>
-
-                  <BoxText>
-                    <Text
-                      mb={16}
-                      color={theme.colors.green.dark}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis
-                      nostrud exercitation ullamco.
-                    </Text>
-
-                    <Text
-                      mb={2}
-                      variant="h5Desktop"
-                      color={theme.colors.green.dark}
-                    >
-                      Pedro Calisto
-                    </Text>
-                    <Text color={theme.colors.green.dark}>
-                      Razer Brasil
-                    </Text>
-                  </BoxText>
-                </BoxBox>
-              </BoxCard>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <BoxCard>
-                <BoxBox>
-                  <BoxImage>
-                    <img src={image1} alt="cliente" />
-                    <img src={icon} alt="aspas" />
-                  </BoxImage>
-
-                  <BoxText>
-                    <Text
-                      mb={16}
-                      color={theme.colors.green.dark}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis
-                      nostrud exercitation ullamco.
-                    </Text>
-
-                    <Text
-                      mb={2}
-                      variant="h5Desktop"
-                      color={theme.colors.green.dark}
-                    >
-                      Pedro Calisto
-                    </Text>
-                    <Text color={theme.colors.green.dark}>
-                      Razer Brasil
-                    </Text>
-                  </BoxText>
-                </BoxBox>
-              </BoxCard>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <BoxCard>
-                <BoxBox>
-                  <BoxImage>
-                    <img src={image1} alt="cliente" />
-                    <img src={icon} alt="aspas" />
-                  </BoxImage>
-
-                  <BoxText>
-                    <Text
-                      mb={16}
-                      color={theme.colors.green.dark}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis
-                      nostrud exercitation ullamco.
-                    </Text>
-
-                    <Text
-                      mb={2}
-                      variant="h5Desktop"
-                      color={theme.colors.green.dark}
-                    >
-                      Pedro Calisto
-                    </Text>
-                    <Text color={theme.colors.green.dark}>
-                      Razer Brasil
-                    </Text>
-                  </BoxText>
-                </BoxBox>
-              </BoxCard>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <BoxCard>
-                <BoxBox>
-                  <BoxImage>
-                    <img src={image1} alt="cliente" />
-                    <img src={icon} alt="aspas" />
-                  </BoxImage>
-
-                  <BoxText>
-                    <Text
-                      mb={16}
-                      color={theme.colors.green.dark}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis
-                      nostrud exercitation ullamco.
-                    </Text>
-
-                    <Text
-                      mb={2}
-                      variant="h5Desktop"
-                      color={theme.colors.green.dark}
-                    >
-                      Pedro Calisto
-                    </Text>
-                    <Text color={theme.colors.green.dark}>
-                      Razer Brasil
-                    </Text>
-                  </BoxText>
-                </BoxBox>
-              </BoxCard>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <BoxCard>
-                <BoxBox>
-                  <BoxImage>
-                    <img src={image1} alt="cliente" />
-                    <img src={icon} alt="aspas" />
-                  </BoxImage>
-
-                  <BoxText>
-                    <Text
-                      mb={16}
-                      color={theme.colors.green.dark}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis
-                      nostrud exercitation ullamco.
-                    </Text>
-
-                    <Text
-                      mb={2}
-                      variant="h5Desktop"
-                      color={theme.colors.green.dark}
-                    >
-                      Pedro Calisto
-                    </Text>
-                    <Text color={theme.colors.green.dark}>
-                      Razer Brasil
-                    </Text>
-                  </BoxText>
-                </BoxBox>
-              </BoxCard>
-            </SwiperSlide>
+                      <Text
+                        mb={2}
+                        variant="h5Desktop"
+                        color={theme.colors.green.dark}
+                      >
+                        {item.name}
+                      </Text>
+                      <Text color={theme.colors.green.dark}>
+                        {item.company}
+                      </Text>
+                    </BoxText>
+                  </BoxBox>
+                </BoxCard>
+              </SwiperSlide>
+            ))}
           </SwiperReact>
         </BoxClients>
 
