@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
               </Text>
 
               <Link
-                href="https://goo.gl/maps/nRNhUdo8rf3fMhhu9"
+                href="https://maps.app.goo.gl/HiRXFhPU9PDjXruU6"
                 passHref
               >
                 <a target="_blank" rel="noopener noreferrer">
