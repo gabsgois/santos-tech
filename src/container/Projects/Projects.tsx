@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { Navigation, Pagination } from 'swiper/modules';
-import { imageProjects } from '../../assets/projects';
+import {
+  imageAlmai,
+  imageCaizen,
+  imageEscola,
+  imageLavanderia,
+  imageSet,
+  imageUltragaz,
+} from '../../assets/projects';
 import { Lightbox, Text } from '../../components';
 import { useWindowSize } from '../../providers';
 import theme from '../../theme';
@@ -17,39 +24,43 @@ import {
 const data = [
   {
     id: 1,
-    img: imageProjects,
-    title: 'Condomínio Washington Luis',
-    description: 'Instalação de câmeras',
+    img: imageAlmai,
+    title: 'Instituto Almai',
+    description:
+      'Computadores, rede cabeada e wireless com suporte técnico',
   },
   {
     id: 2,
-    img: imageProjects,
-    title: 'Almai - Clínica especializada em Autismo',
-    description: 'Instalação de Computadores e rede',
+    img: imageCaizen,
+    title: 'Caizen - Comunicação Visual',
+    description:
+      'Instalação e manutenção de Sistema de segurança',
   },
   {
     id: 3,
-    img: imageProjects,
-    title: 'Clínica Dentária',
-    description: 'Instalação de câmeras, interfones e automação',
+    img: imageSet,
+    title: 'Set Logística',
+    description:
+      'Sistema de Segurança Eletrônica CFTV e Alarme e TI',
   },
   {
-    id: 1,
-    img: imageProjects,
-    title: 'Condomínio Washington Luis',
-    description: 'Instalação de câmeras',
+    id: 4,
+    img: imageUltragaz,
+    title: 'Ultragaz Guáruja',
+    description: 'Sistema de Segurança Eletrônica CFTV e Alarme',
   },
   {
-    id: 2,
-    img: imageProjects,
-    title: 'Almai - Clínica especializada em Autismo',
-    description: 'Instalação de Computadores e rede',
+    id: 5,
+    img: imageEscola,
+    title:
+      'Escola - E.E. Esmeraldo Soares Tarquínio de Campos Filho',
+    description: 'Sistema de Segurança Eletrônica CFTV e Alarme',
   },
   {
-    id: 3,
-    img: imageProjects,
-    title: 'Clínica Dentária',
-    description: 'Instalação de câmeras, interfones e automação',
+    id: 6,
+    img: imageLavanderia,
+    title: 'Lavanderia da Sorte',
+    description: 'Câmeras, interfones e automação',
   },
 ];
 

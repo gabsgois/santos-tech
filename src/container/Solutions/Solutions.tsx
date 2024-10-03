@@ -38,7 +38,7 @@ import { Pagination } from 'swiper/modules';
 const data = [
   {
     img: image1,
-    description: 'Instalação de câmeras',
+    description: 'Câmeras e Alarmes',
   },
   {
     img: image2,
@@ -46,7 +46,7 @@ const data = [
   },
   {
     img: image3,
-    description: 'Acesso através de reconhecimento facial',
+    description: 'Controle de acesso',
   },
   {
     img: image4,
@@ -54,7 +54,7 @@ const data = [
   },
   {
     img: image5,
-    description: 'instalação de alarmes de incêndio',
+    description: 'Sistemas de alarme de incêndio',
   },
   {
     img: image6,

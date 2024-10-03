@@ -169,6 +169,8 @@ export const BoxSlides = styled.div`
   margin-inline: auto;
 
   & > img {
+    border-radius: 15px;
+
     @media (max-width: ${theme.breakpoints.desktop.px}) {
       width: 315px;
       height: 220px;
