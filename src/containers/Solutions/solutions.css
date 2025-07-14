@@ -1,0 +1,15 @@
+.swiper-solutions .swiper-scrollbar {
+  height: 6px;
+}
+
+.swiper-solutions .swiper-scrollbar-drag {
+  background-color: var(--green);
+  border-radius: 4px;
+}
+
+.swiper-solutions .swiper {
+  padding-bottom: 32px;
+}
+.swiper-solutions .swiper-slide {
+  width: auto;
+}

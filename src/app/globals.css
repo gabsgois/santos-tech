@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+:root {
+  --white: #ffffff;
+  --background-gray: #f2f2f2;
+  --gray: #b3b3b3;
+  --pearl: #ede4db;
+  --green: #3b614f;
+  --green-light: #d3dd6a;
+  --green-dark: #223628;
+}
+
+@theme inline {
+  --color-background: var(--white);
+  --color-foreground: var(--green);
+  --font-text: 'Work Sans', sans-serif;
+  --font-heading: 'Urbanist', sans-serif;
+  --text-nav: 500 17px/27px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--green);
+  font-family: var(--font-text);
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+}
