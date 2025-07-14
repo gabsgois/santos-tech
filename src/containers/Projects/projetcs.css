@@ -1,0 +1,128 @@
+.swiper-projects-container {
+  width: 100%;
+
+  @media (width >= 64rem /* 1024px */) {
+    max-width: calc(64rem + 54px) /* 1024px */;
+  }
+
+  @media (width >= 80rem /* 1280px */) {
+    max-width: calc(80rem + 54px) /* 1280px */;
+  }
+
+  @media (width >= 96rem /* 1536px */) {
+    max-width: calc(96rem + 54px) /* 1536px */;
+  }
+}
+
+.swiper-projects .swiper-wrapper {
+  @media (width >= 80rem /* 1280px */) {
+    padding-inline: 27px;
+  }
+}
+
+.swiper-projects .swiper-scrollbar {
+  height: 6px;
+}
+
+.swiper-projects .swiper-scrollbar-drag {
+  background-color: var(--pearl);
+  border-radius: 4px;
+}
+
+.swiper-projects .swiper {
+  padding-bottom: 32px;
+
+  @media (width >= 64rem /* 1024px */) {
+    padding-right: 54px;
+  }
+}
+.swiper-projects .swiper-slide {
+  padding-inline: 4px;
+  width: auto;
+}
+
+.swiper-projects .swiper-button-prev,
+.swiper-projects .swiper-button-next {
+  display: none;
+  background-color: var(--pearl);
+  border-radius: 100px;
+  height: 54px;
+  top: 212px;
+  width: 54px;
+
+  @media (width >= 48rem /* 768px */) {
+    display: none;
+  }
+
+  @media (width >= 64rem /* 1024px */) {
+    display: flex;
+  }
+}
+
+.swiper-projects .swiper-button-prev {
+  left: 0;
+}
+
+.swiper-projects .swiper-button-next {
+  left: 876px;
+  right: auto;
+}
+
+.swiper-projects .swiper-button-prev::after,
+.swiper-projects .swiper-button-next::after {
+  color: var(--green);
+  font-size: 12px;
+  transition: 0.3s all ease-in-out;
+}
+
+.swiper-projects .swiper-button-prev:hover::after {
+  transform: translateX(-5px);
+}
+
+.swiper-projects .swiper-button-next:hover::after {
+  transform: translateX(5px);
+}
+
+.swiper-projects .swiper-button-disabled {
+  display: none;
+}
+
+.yarl__container {
+  background-color: var(--green-dark);
+}
+
+.yarl__button {
+  background-color: var(--pearl);
+  border-radius: 100px;
+  height: 54px;
+  width: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: none;
+  color: var(--green) !important;
+  font-size: 12px;
+  padding: 8px 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.yarl__navigation_prev {
+  left: 16px;
+}
+
+.yarl__navigation_next {
+  right: 16px;
+}
+
+.yarl__navigation_prev:hover svg {
+  transform: translateX(-5px);
+}
+
+.yarl__navigation_next:hover svg {
+  transform: translateX(5px);
+}
+
+.yarl__slide_image,
+video {
+  border-radius: 16px;
+}

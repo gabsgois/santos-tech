@@ -1,0 +1,32 @@
+.scroller {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.scroller .scroller-content {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: fit-content;
+}
+
+.scroller .scroller-content:hover {
+  animation-play-state: paused;
+}
+
+.scroller .scroller-content .scroller-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-inline: 32px;
+  width: 234px;
+}
