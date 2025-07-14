@@ -7,30 +7,30 @@ export const testimonialsData = [
     company: 'Cliente satisfeito',
   },
   {
-    img: '/solutions/solution-1.svg',
+    img: '/solutions/solution-2.svg',
     message:
       'O interfone instalado pela empresa é de excelente qualidade. A comunicação é clara e a instalação foi rápida e sem problemas.',
     author: 'Maria Oliveira',
     company: 'Cliente Satisfeita',
   },
   {
-    img: '/solutions/solution-2.svg',
+    img: '/solutions/solution-3.svg',
     message:
       'A tecnologia de reconhecimento facial é impressionante. Me sinto muito mais seguro sabendo que minha casa está protegida.',
     author: 'Rogério Pereira',
     company: 'Cliente Satisfeito',
   },
   {
-    img: '/solutions/solution-3.svg',
+    img: '/solutions/solution-4.svg',
     message:
       ' Automação de portas e portões trouxe mais comodidade e segurança para minha casa. Recomendo!',
     author: 'Ana Cláudia',
     company: 'Cliente Satisfeita',
   },
   {
-    img: '/solutions/solution-4.svg',
+    img: '/solutions/solution-1.svg',
     message:
-      'A instalação de alarmes foi rápida e eficiente. Agora me sinto muito mais seguro.',
+      'A instalação das câmeras foi muito eficiente. Foi feita com muita atenção nos detalhes e sem correria, pra que tudo funcionasse corretamente. Agora me sinto muito mais seguro.',
     author: 'Roberto Lima',
     company: 'Cliente Satisfeito',
   },

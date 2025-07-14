@@ -17,7 +17,7 @@ export const solutionsData = [
   },
   {
     img: '/solutions/solution-5.svg',
-    description: 'instalação de alarmes de incêndio',
+    description: 'Instalação de alarmes de incêndio',
   },
   {
     img: '/solutions/solution-6.svg',
